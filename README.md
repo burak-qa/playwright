@@ -1,1 +1,1 @@
-# playwrigth
+# playwright
