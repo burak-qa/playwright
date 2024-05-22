@@ -17,7 +17,6 @@ public class Demo {
                 .setSnapshots(true)
                 .setSources(true));
 
-
         Page page  = context.newPage();
         page.navigate("https://www.google.com/");
         page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Alles accepteren")).click();
@@ -26,8 +25,6 @@ public class Demo {
         System.out.println(page.title());
         System.out.println("Hello playwright");
         page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get("target//example.png")));
-        System.out.println("Hello playwright");
-
 
         context.tracing().stop(new Tracing.StopOptions()
                 .setPath(Paths.get("target//trace.zip")));
