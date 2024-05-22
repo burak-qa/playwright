@@ -22,7 +22,16 @@ public class Demo {
         page.navigate("https://www.google.com/");
         page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Alles accepteren")).click();
         assertThat(page.getByRole(AriaRole.IMG, new Page.GetByRoleOptions().setName("Google"))).isVisible();
+        
         System.out.println(page.title());
         System.out.println("Hello playwright");
+        page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get("target//example.png")));
+        System.out.println("Hello playwright");
+
+
+        context.tracing().stop(new Tracing.StopOptions()
+                .setPath(Paths.get("target//trace.zip")));
+
+        page.close();
     }
 }
