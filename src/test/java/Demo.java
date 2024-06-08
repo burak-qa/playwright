@@ -23,7 +23,7 @@ public class Demo {
         assertThat(page.getByRole(AriaRole.IMG, new Page.GetByRoleOptions().setName("Google"))).isVisible();
         
         System.out.println(page.title());
-        System.out.println("Hello playwright");
+        System.out.println("Hello Playwright");
         page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get("target//example.png")));
 
         context.tracing().stop(new Tracing.StopOptions()
